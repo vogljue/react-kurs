@@ -15,7 +15,7 @@ const MainContentWidget = (props) => {
   return (
     <main  className={classes.content}>
       <div className={classes.toolbar} />
-      {props.content}
+      {props.children}
     </main>
   );
 }

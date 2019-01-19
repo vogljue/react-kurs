@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, Divider } from '@material-ui/core';
-import { MoveToInbox, Mail } from '@material-ui/icons';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
+import MoveToInbox from '@material-ui/icons/MoveToInbox';
+import Mail from '@material-ui/icons/Mail';
 import { withStyles } from '@material-ui/core/styles';
 
 const drawerWidth = 240;
@@ -38,24 +44,21 @@ const DrawerWidget = (props) => {
         <List>
             <ListItem 
               button 
-              selected={props.selectedIndex === 0}
-              onClick={event => props.handleListItemClick(event, 0)}
+              selected={props.location === '/'}
               component={Link} to="/">
               <ListItemIcon><MoveToInbox /></ListItemIcon>
               <ListItemText primary='Home' />
             </ListItem>
             <ListItem 
               button 
-              selected={props.selectedIndex === 1}
-              onClick={event => props.handleListItemClick(event, 1)}
+              selected={props.location === '/login'}
               component={Link} to="/login">
               <ListItemIcon><Mail /></ListItemIcon>
               <ListItemText primary='Login' />
             </ListItem>
             <ListItem 
               button 
-              selected={props.selectedIndex === 2}
-              onClick={event => props.handleListItemClick(event, 2)}
+              selected={props.location === '/signup'}
               component={Link} to="/signup">
               <ListItemIcon><Mail /></ListItemIcon>
               <ListItemText primary='Signup' />

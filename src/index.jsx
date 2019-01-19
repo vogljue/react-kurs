@@ -7,15 +7,7 @@ class App extends Component {
   render() {
     return (
         <Router>
-          <div>
-           <AppContainer>
-           <Switch>
-             <Route exact path="/" component={HomeContainer} />
-             <Route path="/login" component={LoginContainer} />
-             <Route path="/signup" component={SignUpContainer} />
-           </Switch>
-           </AppContainer>
-          </div>
+           <Route path="/" component={AppContainer} />
         </Router>
     );
   }
