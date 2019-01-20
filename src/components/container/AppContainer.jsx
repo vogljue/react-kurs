@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { LayoutWidget, TopAppBarWidget, DrawerWidget, MainContentWidget } from '../presentation';
-import { HomeContainer, LoginContainer, SignUpContainer } from '../../components';
+import { HomeContainer, LoginContainer, SignUpContainer } from '../container';
 
 
 class AppContainer extends Component {

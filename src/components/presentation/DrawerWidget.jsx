@@ -9,16 +9,11 @@ import Divider from '@material-ui/core/Divider';
 import MoveToInbox from '@material-ui/icons/MoveToInbox';
 import Mail from '@material-ui/icons/Mail';
 import { withStyles } from '@material-ui/core/styles';
+import { SideDrawerWidget } from '../presentation';
 
 const drawerWidth = 240;
 
 const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-  },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
@@ -26,16 +21,13 @@ const styles = theme => ({
   drawerPaper: {
     width: drawerWidth,
   },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing.unit * 3,
-  },
   toolbar: theme.mixins.toolbar
 });
 
 const DrawerWidget = (props) => {
   const { classes } = props;
   return (
+     <div>
      <Drawer
       className={classes.drawer}
       variant="permanent"
@@ -65,6 +57,8 @@ const DrawerWidget = (props) => {
             </ListItem>
         </List>
     </Drawer>
+    <SideDrawerWidget location={props.location} />
+    </div>  
   );
 }
 
