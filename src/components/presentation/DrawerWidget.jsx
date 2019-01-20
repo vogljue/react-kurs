@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -55,11 +56,23 @@ const DrawerWidget = (props) => {
               <ListItemIcon><Mail /></ListItemIcon>
               <ListItemText primary='Signup' />
             </ListItem>
+            <ListItem 
+              button 
+              selected={props.location === '/todos'}
+              component={Link} to="/todos">
+              <ListItemIcon><Mail /></ListItemIcon>
+              <ListItemText primary='ToDos' />
+            </ListItem>
         </List>
     </Drawer>
     <SideDrawerWidget location={props.location} />
     </div>  
   );
 }
+
+DrawerWidget.propTypes = {
+  classes: PropTypes.object.isRequired,
+  location: PropTypes.string.isRequired,
+};
 
 export default withStyles(styles)(DrawerWidget);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Drawer from '@material-ui/core/Drawer';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
@@ -21,9 +22,10 @@ const styles = theme => ({
 });
 
 const descriptions = [
-  { id: "/", header: "Home", text: "Welcome to the HomeView. Here is a minimal description of what you can do." },
-  { id: "/login", header: "Login", text: "Welcome to the LoginView. Here is a minimal description of what you can do." },
-  { id: "/signup", header: "SignUp", text: "Welcome to the SignupView. Here is a minimal description of what you can do." },
+  { id: "/", header: "Home", text: "Welcome to the HomeView. Here is a short description of what you can do." },
+  { id: "/login", header: "Login", text: "Welcome to the LoginView. Here is a short description of what you can do." },
+  { id: "/signup", header: "SignUp", text: "Welcome to the SignupView. Here is a short description of what you can do." },
+  { id: "/todos", header: "ToDos", text: "Welcome to the TodosView. Here is a short description of what you can do." },
 ];
 
 const SideDrawerWidget = (props) => {
@@ -43,5 +45,10 @@ const SideDrawerWidget = (props) => {
     </Drawer>
   );
 }
+
+SideDrawerWidget.propTypes = {
+  classes: PropTypes.object.isRequired,
+  location: PropTypes.string.isRequired,
+};
 
 export default withStyles(styles)(SideDrawerWidget);

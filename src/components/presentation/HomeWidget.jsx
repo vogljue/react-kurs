@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -91,5 +92,11 @@ const HomeWidget = (props) => {
   </div>
   );
 }
+
+HomeWidget.propTypes = {
+  classes: PropTypes.object.isRequired,
+  expanded: PropTypes.string.isRequired,
+  handleChangePanel: PropTypes.func.isRequired,
+};
 
 export default withStyles(styles)(HomeWidget);

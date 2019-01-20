@@ -1,6 +1,12 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Button, Typography } from '@material-ui/core';
-import { Menu, AccountCircle } from '@material-ui/icons';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Menu from '@material-ui/icons/Menu';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -41,5 +47,9 @@ const TopAppBarWidget = (props) => {
     </AppBar>  
   );
 }
+
+TopAppBarWidget.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(TopAppBarWidget);

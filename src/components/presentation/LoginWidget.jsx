@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
@@ -68,5 +69,11 @@ return (
     </Grid>
   );
 }
+
+LoginWidget.propTypes = {
+  classes: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+};
 
 export default withStyles(styles)(LoginWidget);

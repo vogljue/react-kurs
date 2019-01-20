@@ -6,5 +6,6 @@ import DrawerWidget from './DrawerWidget';
 import SideDrawerWidget from './SideDrawerWidget';
 import MainContentWidget from './MainContentWidget';
 import LayoutWidget from './LayoutWidget';
+import TodoWidget from './TodoWidget';
 
-export { HomeWidget, LoginWidget, SignUpWidget, TopAppBarWidget, DrawerWidget, SideDrawerWidget, MainContentWidget, LayoutWidget };
+export { HomeWidget, LoginWidget, SignUpWidget, TopAppBarWidget, DrawerWidget, SideDrawerWidget, MainContentWidget, LayoutWidget, TodoWidget };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 const drawerWidth = 240;
@@ -22,5 +23,10 @@ const MainContentWidget = (props) => {
     </main>
   );
 }
+
+MainContentWidget.propTypes = {
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default withStyles(styles)(MainContentWidget);
