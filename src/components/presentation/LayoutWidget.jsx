@@ -1,6 +1,12 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
 
 const styles = theme => ({
   root: {
@@ -12,10 +18,12 @@ const LayoutWidget = (props) => {
   const { classes } = props;
 
   return (
-  <div className={classes.root}>
-      <CssBaseline />
-      {props.children}
-  </div>
+  <MuiThemeProvider theme={theme}>
+    <div className={classes.root}>
+        <CssBaseline />
+        {props.children}
+    </div>
+  </MuiThemeProvider>
   );
 }
 
