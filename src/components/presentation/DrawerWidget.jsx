@@ -31,7 +31,9 @@ const DrawerWidget = (props) => {
      <div>
      <Drawer
       className={classes.drawer}
-      variant="permanent"
+      variant="persistent"
+      anchor="left"
+      open={props.drawerOpen}
       classes={{paper: classes.drawerPaper,}}>
         <div className={classes.toolbar} />
         <List>
@@ -65,7 +67,6 @@ const DrawerWidget = (props) => {
             </ListItem>
         </List>
     </Drawer>
-    <SideDrawerWidget location={props.location} />
     </div>  
   );
 }
@@ -73,6 +74,7 @@ const DrawerWidget = (props) => {
 DrawerWidget.propTypes = {
   classes: PropTypes.object.isRequired,
   location: PropTypes.string.isRequired,
+  drawerOpen: PropTypes.bool.isRequired,
 };
 
 export default withStyles(styles)(DrawerWidget);

@@ -33,7 +33,7 @@ const TopAppBarWidget = (props) => {
   return (
     <AppBar position="fixed" color="default" className={classes.appBar}>
       <Toolbar>
-        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+        <IconButton className={classes.menuButton} onClick={props.handleDrawerOpen} color="inherit" aria-label="Menu">
           <Menu />
         </IconButton>
         <Typography variant="h6" color="inherit" noWrap  className={classes.grow}>

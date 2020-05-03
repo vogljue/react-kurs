@@ -26,47 +26,47 @@ const styles = theme => ({
 const LoginWidget = (props) => {
   const { classes } = props;
 return (
-    <Grid container className={classes.root} spacing={16}>  
+    <div className={classes.root}>
+    <Grid container spacing={16}>  
       <Grid item xs={12}>  
         <Typography variant="h4" >Login Form</Typography>
       </Grid>
       <Grid item xs={12}>  
         <Typography variant="subheading">Zugangsdaten</Typography> 
       </Grid>
-      <Grid item xs={12}>  
-        <Paper className={classes.paper} elevation={1}>
-            <form noValidate autoComplete="off">
-              <Grid container alignItems="flex-end">
-                <Grid item xs={4}>  
-                <TextField
-                  id="outlined-name"
-                  label="Name"
-                  value={props.name}
-                  className={classes.textField}
-                  onChange={props.handleChange('name')}
-                  margin="normal"
-                  variant="outlined"
-                />
-                </Grid>
-                <Grid item xs={4}>  
-                <TextField
-                      id="outlined-password"
-                      label="Password"
-                      className={classes.textField}
-                      type="password"
-                      autoComplete="current-password"
-                      margin="normal"
-                      variant="outlined"
-                />
-                </Grid>
-                <Grid item xs={4}>  
-                  <Button className={classes.button} variant="outlined">Submit</Button>
-                </Grid>
-            </Grid>
-          </form>
-        </Paper>
-      </Grid>
     </Grid>
+    <Paper className={classes.paper} elevation={1}>
+        <form noValidate autoComplete="off">
+            <Grid container alignItems="flex-end">
+            <Grid item xs={6}>  
+            <TextField
+                id="outlined-name"
+                label="Name"
+                value={props.name}
+                className={classes.textField}
+                onChange={props.handleChange('name')}
+                margin="normal"
+                variant="outlined"
+            />
+            </Grid>
+            <Grid item xs={6}>  
+            <TextField
+                    id="outlined-password"
+                    label="Password"
+                    className={classes.textField}
+                    type="password"
+                    autoComplete="current-password"
+                    margin="normal"
+                    variant="outlined"
+            />
+            </Grid>
+            <Grid item xs={12}>  
+                <Button className={classes.button} variant="outlined">Submit</Button>
+            </Grid>
+        </Grid>
+        </form>
+    </Paper>
+    </div>
   );
 }
 
