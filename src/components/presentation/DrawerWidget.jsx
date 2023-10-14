@@ -9,7 +9,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import MoveToInbox from '@mui/icons-material/MoveToInbox';
 import Mail from '@mui/icons-material/Mail';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import { SideDrawerWidget } from '../presentation';
 
 const drawerWidth = 240;

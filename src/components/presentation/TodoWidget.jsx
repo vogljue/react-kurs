@@ -8,7 +8,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import CalendarToday from '@mui/icons-material/CalendarToday';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 const styles = theme => ({
   root: {

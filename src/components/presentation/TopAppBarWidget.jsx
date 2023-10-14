@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 const styles = theme => ({
   grow: {

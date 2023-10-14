@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Drawer from '@mui/material/Drawer';
 import Typography from '@mui/material/Typography';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 const drawerWidth = 240;
 

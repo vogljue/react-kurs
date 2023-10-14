@@ -12,7 +12,7 @@ import TablePagination from '@mui/material/TablePagination';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 const styles = theme => ({
   container: {
